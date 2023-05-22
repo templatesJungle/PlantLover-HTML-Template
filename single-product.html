@@ -13,13 +13,11 @@
     
     <link href="plugins/bootstrap-5.1.3/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/vendor.css">
-    <link rel="stylesheet" href="plugins/swiper/swiper.min.css" />
     <link rel="stylesheet" type="text/css" href="style.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&family=Open+Sans:wght@300;400;500;600;700&family=Over+the+Rainbow&display=swap" rel="stylesheet">
-    
   </head>
   <body data-bs-spy="scroll" data-bs-target="#header-nav">
     <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
@@ -47,9 +45,18 @@
         <title>Shopping Cart</title>
         <path fill="currentColor" d="M16 3c-2.746 0-5 2.254-5 5v1H6.062L6 9.938l-1 18L4.937 29h22.125L27 27.937l-1-18L25.937 9H21V8c0-2.746-2.254-5-5-5zm0 2a3 3 0 0 1 3 3v1h-6V8a3 3 0 0 1 3-3zm-8.063 6H11v3h2v-3h6v3h2v-3h3.063l.875 16H7.063z" />
       </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" id="plus" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M19 11h-6V5a1 1 0 0 0-2 0v6H5a1 1 0 0 0 0 2h6v6a1 1 0 0 0 2 0v-6h6a1 1 0 0 0 0-2Z"/>
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" id="minus" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M19 11H5a1 1 0 0 0 0 2h14a1 1 0 0 0 0-2Z"/>
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" id="check" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M18.71 7.21a1 1 0 0 0-1.42 0l-7.45 7.46l-3.13-3.14A1 1 0 1 0 5.29 13l3.84 3.84a1 1 0 0 0 1.42 0l8.16-8.16a1 1 0 0 0 0-1.47Z"/>
+      </symbol>
     </svg>
 
-    <header id="header-wrap" class="align-items-center position-fixed bg-white px-3">
+    <header id="header-wrap" class="align-items-center position-sticky top-0 bg-white px-3">
 
       <nav class="navbar navbar-expand-lg">
 
@@ -62,10 +69,10 @@
             </div>
           </div>
 
-          <button class="navbar-toggler text-white" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation"><svg class="menu"><use xlink:href="#menu" /></svg></button>
+          <button class="navbar-toggler text-white" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation"><svg class="menu" width="24" height="24"><use xlink:href="#menu" /></svg></button>
           
           <!-- off canvas -->
-          <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
             
             <div class="offcanvas-header">
               <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
@@ -92,15 +99,16 @@
                   </li>
                   <li class="nav-item dropdown">
                     <a class="nav-link me-4 dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Pages</a>
-                    <ul class="dropdown-menu dropdown-menu-dark">
-                      <li><a href="about.html" class="dropdown-item" href="#scrollspyHeading3">About</a></li>
-                      <li><a href="blog.html" class="dropdown-item" href="#scrollspyHeading4">Blog</a></li>
-                      <li><a href="single-post.html" class="dropdown-item" href="#scrollspyHeading5">Single</a></li>
-                      <li><a href="single-product.html" class="dropdown-item" href="#scrollspyHeading5">Single Product</a></li>
-                      <li><a href="checkout.html" class="dropdown-item" href="#scrollspyHeading5">Checkout</a></li>
-                      <li><a href="cart.html" class="dropdown-item" href="#scrollspyHeading5">Cart</a></li>
-                      <li><a href="contact.html" class="dropdown-item" href="#scrollspyHeading5">Contact</a></li>
-                      <li><a href="styles.html" class="dropdown-item" href="#scrollspyHeading5">Styles</a></li>
+                    <ul class="dropdown-menu">
+                      <li><a href="home-alternative.html" class="dropdown-item">Home v2<span class="badge bg-primary ms-2">PRO</span></a></li>
+                      <li><a href="about.html" class="dropdown-item">About</a></li>
+                      <li><a href="blog.html" class="dropdown-item">Blog</a></li>
+                      <li><a href="single-post.html" class="dropdown-item">Single</a></li>
+                      <li><a href="single-product.html" class="dropdown-item">Single Product<span class="badge bg-primary ms-2">PRO</span></a></a></li>
+                      <li><a href="checkout.html" class="dropdown-item">Checkout<span class="badge bg-primary ms-2">PRO</span></a></a></li>
+                      <li><a href="cart.html" class="dropdown-item">Cart<span class="badge bg-primary ms-2">PRO</span></a></a></li>
+                      <li><a href="contact.html" class="dropdown-item">Contact</a></li>
+                      <li><a href="styles.html" class="dropdown-item">Styles</a></li>
                     </ul>
                   </li>
                 </ul>
@@ -116,7 +124,7 @@
                 <form action="" autocomplete="on">
                 <input id="search" name="search" type="text" placeholder="What're we looking for ?">
                 <button type="submit">
-                  <svg class="search">
+                  <svg class="search" width="24" height="24">
                     <use xlink:href="#search" />
                   </svg>
                 </button>
@@ -124,13 +132,13 @@
               </div>
               <div class="user-items d-flex gap-3">
                 <a href="#">
-                  <svg class="user"><use xlink:href="#user" /></svg>
+                  <svg class="user" width="24" height="24"><use xlink:href="#user" /></svg>
                 </a>
                 <a href="#">
-                  <svg class="like"><use xlink:href="#like" /></svg>
+                  <svg class="like" width="24" height="24"><use xlink:href="#like" /></svg>
                 </a>
                 <a href="cart.html">
-                  <svg class="shopping-bag"><use xlink:href="#shopping-bag" /></svg>
+                  <svg class="shopping-bag" width="24" height="24"><use xlink:href="#shopping-bag" /></svg>
                 </a>
               </div>
             </div>
@@ -140,7 +148,7 @@
       </nav>
     </header>
 
-    <section class="padding-large">
+    <section class="py-5">
       <div class="container">
         <div class="row">
           <div class="breadcrumbs">
@@ -156,7 +164,7 @@
       </div>
     </section>
 
-    <section id="product-detail" class="single-product padding-large no-padding-top">
+    <section id="product-detail" class="single-product py-5 no-padding-top">
       <div class="container">
         <div class="row">
           <div class="col-md-6">
@@ -204,7 +212,7 @@
             </div>
           </div>
           <div class="col-md-5">
-            <div class="product-info">
+            <div class="product-info ps-4">
               <div class="element-header">
                 <h3 itemprop="name" class="product-title no-margin">Baggy Jacket</h3>
                 <div class="rating-container d-flex align-items-center">
@@ -335,7 +343,7 @@
               </div>
             </nav>
             <div class="tab-content" id="nav-tabContent">
-              <div class="tab-pane fade show active border-top border-bottom padding-small" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+              <div class="tab-pane fade show active border-bottom padding-small" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
                 <p>Product Description</p>
                 <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna viverra non, semper suscipit, posuere a, pede. Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis. Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique cursus.</p>
                 <p>Photo by <a href="https://unsplash.com/es/@feeypflanzen?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">feey</a> on <a href="https://unsplash.com/@feeypflanzen?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
@@ -347,11 +355,11 @@
                 </ul> 
                 <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna viverra non, semper suscipit, posuere a, pede. Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis. Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique cursus. </p>
               </div>
-              <div class="tab-pane fade border-top border-bottom padding-small" id="nav-information" role="tabpanel" aria-labelledby="nav-information-tab">
+              <div class="tab-pane fade border-bottom padding-small" id="nav-information" role="tabpanel" aria-labelledby="nav-information-tab">
                 <p>It is Comfortable and Best</p>
                 <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
               </div>
-              <div class="tab-pane fade border-top border-bottom padding-small" id="nav-review" role="tabpanel" aria-labelledby="nav-review-tab">
+              <div class="tab-pane fade border-bottom padding-small" id="nav-review" role="tabpanel" aria-labelledby="nav-review-tab">
                 <div class="review-box d-flex">
                   <div class="review-item d-flex">
                     <div class="row">
@@ -433,376 +441,69 @@
       </div>
     </section>
 
-    <section id="selling-product" class="single-product padding-xlarge">
+    <section>
       <div class="container">
-        <div class="row mt-5">
-          <div class="col-lg-6">
-            <div class="product-preview mb-3">
-              <img src="images/product-large.jpg" alt="single-product" class="img-fluid">
-            </div>
-          </div>
-          <div class="col-lg-6">
-            <div class="product-info">
-              <div class="element-header">
-                <h3 itemprop="name" class="display-7 text-uppercase">Pink Watch</h3>
-                <div class="rating-container d-flex align-items-center">
-                  <div class="rating" data-rating="1" onclick=rate(1)>
-                    <svg class="star star-fill">
-                      <use xlink:href="#star-fill"></use>
-                    </svg>
-                    <span class="rating-count ps-2">5.2</span>
-                  </div>
-                </div>
-              </div>
-              <div class="product-price pt-3 pb-3">
-                <strong class="text-primary display-6 fw-bold">$870.00</strong>
-              </div>
-              <p>Justo, cum feugiat imperdiet nulla molestie ac vulputate scelerisque amet. Bibendum adipiscing platea blandit sit sed quam semper rhoncus. Diam ultrices maecenas consequat eu tortor orci, cras lectus mauris, cras egestas quam venenatis neque.</p>
-              <div class="cart-wrap padding-small">
-                <div class="color-options product-select">
-                  <div class="color-toggle" data-option-index="0">
-                    <h4 class="item-title text-uppercase text-dark text-decoration-underline">Color:</h4>
-                    <ul class="select-list list-unstyled d-flex">
-                      <li class="select-item pe-3" data-val="Green" title="Green">
-                        <a href="#">Green</a>
-                      </li>
-                      <li class="select-item pe-3" data-val="Orange" title="Orange">
-                        <a href="#">Orange</a>
-                      </li>
-                      <li class="select-item pe-3" data-val="Red" title="Red">
-                        <a href="#">Red</a>
-                      </li>
-                      <li class="select-item" data-val="Black" title="Black">
-                        <a href="#">Black</a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="swatch product-select" data-option-index="1">
-                  <h4 class="item-title text-uppercase text-dark text-decoration-underline">Size:</h4>
-                  <ul class="select-list list-unstyled d-flex">
-                    <li data-value="S" class="select-item pe-3">
-                      <a href="#">XL</a>
-                    </li>
-                    <li data-value="M" class="select-item pe-3">
-                      <a href="#">L</a>
-                    </li>
-                    <li data-value="L" class="select-item pe-3">
-                      <a href="#">M</a>
-                    </li>
-                    <li data-value="L" class="select-item">
-                      <a href="#">S</a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="product-quantity">
-                  <div class="stock-number text-dark">2 in stock</div>
-                  <div class="stock-button-wrap pt-3">
+        <h2 class="display-7 text-dark text-uppercase">Related Products</h2>
 
-                    <div class="input-group product-qty">
-                        <span class="input-group-btn">
-                            <button type="button" class="quantity-left-minus btn btn-number"  data-type="minus" data-field="">
-                              -
-                            </button>
-                        </span>
-                        <input type="text" id="quantity" name="quantity" class="form-control input-number" value="1" min="1" max="100">
-                        <span class="input-group-btn">
-                            <button type="button" class="quantity-right-plus btn btn-number" data-type="plus" data-field="">
-                                +
-                            </button>
-                        </span>
-                    </div>
-                    <div class="qty-button d-flex flex-wrap pt-3">
-                      <button type="submit" class="btn btn-primary btn-medium text-uppercase me-3 mt-3">Buy now</button>
-                      <button type="submit" name="add-to-cart" value="1269" class="btn btn-black btn-medium text-uppercase mt-3">Add to cart</button>                      
-                    </div>
-                  </div>
-                </div>
+        <div class="product-row row">
+          <div class="col-md-4">
+            <div class="card product-card border-0 bg-transparent border-none link-effect">
+              <div class="card-image image-zoom">
+                <img src="images/product-thumb-1.jpg" class="img-fluid" alt="plant">
               </div>
-              <div class="meta-product py-2">
-                <div class="meta-item d-flex align-items-baseline">
-                  <h4 class="item-title no-margin pe-2">SKU:</h4>
-                  <ul class="select-list list-unstyled d-flex">
-                    <li data-value="S" class="select-item">1223</li>
-                  </ul>
-                </div>
-                <div class="meta-item d-flex align-items-baseline">
-                  <h4 class="item-title no-margin pe-2">Category:</h4>
-                  <ul class="select-list list-unstyled d-flex">
-                    <li data-value="S" class="select-item">
-                      <a href="#">Watch</a>,
-                    </li>
-                    <li data-value="S" class="select-item">
-                      <a href="#"> Screen touch</a>,
-                    </li>
-                  </ul>
-                </div>
-                <div class="meta-item d-flex align-items-baseline">
-                  <h4 class="item-title no-margin pe-2">Tags:</h4>
-                  <ul class="select-list list-unstyled d-flex">
-                    <li data-value="S" class="select-item">
-                      <a href="#">Classic</a>,
-                    </li>
-                    <li data-value="S" class="select-item">
-                      <a href="#"> Modern</a>
-                    </li>
-                  </ul>
-                </div>
+              <div class="d-flex justify-content-between align-items-center">
+                <h3 class="product-title">
+                  <a href="#">Cane plants</a>
+                </h3>
+                <a class="price" href="#" data-after="ADD TO CART"><span>$ 23.00</span></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card product-card border-0 bg-transparent border-none link-effect">
+              <div class="card-image image-zoom">
+                <img src="images/product-thumb-2.jpg" class="img-fluid" alt="plant">
+              </div>
+              <div class="d-flex justify-content-between align-items-center">
+                <h3 class="product-title">
+                  <a href="#">Ficus plants</a>
+                </h3>
+                <a class="price" href="#" data-after="ADD TO CART"><span>$ 20.00</span></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card product-card border-0 bg-transparent border-none link-effect">
+              <div class="card-image image-zoom">
+                <img src="images/product-thumb-3.jpg" class="img-fluid" alt="plant">
+              </div>
+              <div class="d-flex justify-content-between align-items-center">
+                <h3 class="product-title">
+                  <a href="#">Vinca vines</a>
+                </h3>
+                <a class="price" href="#" data-after="ADD TO CART"><span>$ 12.00</span></a>
               </div>
             </div>
           </div>
         </div>
+
       </div>
     </section>
-    <section class="product-info-tabs">
+    
+    <section id="subscribe" class="container-grid py-5 position-relative overflow-hidden">
       <div class="container">
         <div class="row">
-          <div class="tabs-listing">
-            <nav>
-              <div class="nav nav-tabs d-flex flex-wrap justify-content-center" id="nav-tab" role="tablist">
-                <button class="nav-link active text-uppercase pe-5" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Description</button>
-                <button class="nav-link text-uppercase pe-5" id="nav-information-tab" data-bs-toggle="tab" data-bs-target="#nav-information" type="button" role="tab" aria-controls="nav-information" aria-selected="false">Additional information</button>
-                <button class="nav-link text-uppercase pe-5" id="nav-review-tab" data-bs-toggle="tab" data-bs-target="#nav-review" type="button" role="tab" aria-controls="nav-review" aria-selected="false">Reviews</button>
-              </div>
-            </nav>
-            <div class="tab-content" id="nav-tabContent">
-              <div class="tab-pane fade show active border-top border-bottom padding-small" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-                <p>Product Description</p>
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna viverra non, semper suscipit, posuere a, pede. Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis. Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique cursus.</p>
-                <ul style="list-style-type:disc;" class="list-unstyled ps-4">
-                  <li>Donec nec justo eget felis facilisis fermentum.</li>
-                  <li>Suspendisse urna viverra non, semper suscipit pede.</li>
-                  <li>Aliquam porttitor mauris sit amet orci.</li>
-                </ul> 
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna viverra non, semper suscipit, posuere a, pede. Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis. Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique cursus. </p>
-              </div>
-              <div class="tab-pane fade border-top border-bottom padding-small" id="nav-information" role="tabpanel" aria-labelledby="nav-information-tab">
-                <p>It is Comfortable and Best</p>
-                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-              </div>
-              <div class="tab-pane fade border-top border-bottom padding-small" id="nav-review" role="tabpanel" aria-labelledby="nav-review-tab">
-                <div class="review-box d-flex flex-wrap">
-                  <div class="col-lg-6 d-flex flex-wrap">
-                    <div class="col-md-2">
-                      <div class="image-holder">
-                        <img src="images/review-item1.jpg" alt="review" class="img-fluid">
-                      </div>
-                    </div>
-                    <div class="col-md-8">
-                      <div class="review-content">
-                        <div class="rating-container d-flex align-items-center">
-                          <div class="rating" data-rating="1" onclick="rate(1)">
-                            <i class="icon icon-star"></i>
-                          </div>
-                          <div class="rating" data-rating="2" onclick="rate(1)">
-                            <i class="icon icon-star"></i>
-                          </div>
-                          <div class="rating" data-rating="3" onclick="rate(1)">
-                            <i class="icon icon-star"></i>
-                          </div>
-                          <div class="rating" data-rating="4" onclick="rate(1)">
-                            <i class="icon icon-star-half"></i>
-                          </div>
-                          <div class="rating" data-rating="5" onclick="rate(1)">
-                            <i class="icon icon-star-empty"></i>
-                          </div>
-                          <span class="rating-count">(3.5)</span>
-                        </div>
-                        <div class="review-header">
-                          <span class="author-name">Tina Johnson</span>
-                          <span class="review-date">– 03/07/2023</span>
-                        </div>
-                        <p>Vitae tortor condimentum lacinia quis vel eros donec ac. Nam at lectus urna duis convallis convallis</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-6 d-flex flex-wrap">
-                    <div class="col-md-2">
-                      <div class="image-holder">
-                        <img src="images/review-item2.jpg" alt="review" class="img-fluid">
-                      </div>
-                    </div>
-                    <div class="col-md-8">
-                      <div class="review-content">
-                        <div class="rating-container d-flex align-items-center">
-                          <div class="rating" data-rating="1" onclick="rate(1)">
-                            <i class="icon icon-star"></i>
-                          </div>
-                          <div class="rating" data-rating="2" onclick="rate(1)">
-                            <i class="icon icon-star"></i>
-                          </div>
-                          <div class="rating" data-rating="3" onclick="rate(1)">
-                            <i class="icon icon-star"></i>
-                          </div>
-                          <div class="rating" data-rating="4" onclick="rate(1)">
-                            <i class="icon icon-star-half"></i>
-                          </div>
-                          <div class="rating" data-rating="5" onclick="rate(1)">
-                            <i class="icon icon-star-empty"></i>
-                          </div>
-                          <span class="rating-count">(3.5)</span>
-                        </div>
-                        <div class="review-header">
-                          <span class="author-name">Jenny Willis</span>
-                          <span class="review-date">– 03/06/2022</span>
-                        </div>
-                        <p>Vitae tortor condimentum lacinia quis vel eros donec ac. Nam at lectus urna duis convallis convallis</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="related-products" class="product-store position-relative padding-large">
-      <div class="container">
-        <div class="row">
-          <div class="display-header d-flex justify-content-between pb-3">
-            <h2 class="display-7 text-dark text-uppercase">Related Products</h2>
-            <div class="btn-right">
-              <a href="shop.html" class="btn btn-medium btn-normal text-uppercase">Go to Shop</a>
-            </div>
-          </div>
-          <div class="swiper product-swiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <div class="product-card position-relative">
-                  <div class="image-holder">
-                    <img src="images/product-item1.jpg" alt="product-item" class="img-fluid">
-                  </div>
-                  <div class="cart-concern position-absolute">
-                    <div class="cart-button d-flex">
-                      <div class="btn-left">
-                        <a href="#" class="btn btn-medium btn-black">Add to Cart</a>
-                        <svg class="cart-outline position-absolute">
-                          <use xlink:href="#cart-outline"></use>
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card-detail d-flex justify-content-between align-items-baseline pt-3">
-                    <h3 class="card-title text-uppercase">
-                      <a href="#">Iphone 10</a>
-                    </h3>
-                    <span class="item-price text-primary">$980</span>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="product-card position-relative">
-                  <div class="image-holder">
-                    <img src="images/product-item2.jpg" alt="product-item" class="img-fluid">
-                  </div>
-                  <div class="cart-concern position-absolute">
-                    <div class="cart-button d-flex">
-                      <div class="btn-left">
-                        <a href="#" class="btn btn-medium btn-black">Add to Cart</a>
-                        <svg class="cart-outline position-absolute">
-                          <use xlink:href="#cart-outline"></use>
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card-detail d-flex justify-content-between align-items-baseline pt-3">
-                    <h3 class="card-title text-uppercase">
-                      <a href="#">Iphone 11</a>
-                    </h3>
-                    <span class="item-price text-primary">$1100</span>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="product-card position-relative">
-                  <div class="image-holder">
-                    <img src="images/product-item3.jpg" alt="product-item" class="img-fluid">
-                  </div>
-                  <div class="cart-concern position-absolute">
-                    <div class="cart-button d-flex">
-                      <div class="btn-left">
-                        <a href="#" class="btn btn-medium btn-black">Add to Cart</a>
-                        <svg class="cart-outline position-absolute">
-                          <use xlink:href="#cart-outline"></use>
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card-detail d-flex justify-content-between align-items-baseline pt-3">
-                    <h3 class="card-title text-uppercase">
-                      <a href="#">Iphone 8</a>
-                    </h3>
-                    <span class="item-price text-primary">$780</span>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="product-card position-relative">
-                  <div class="image-holder">
-                    <img src="images/product-item4.jpg" alt="product-item" class="product-image">
-                  </div>
-                  <div class="cart-concern position-absolute">
-                    <div class="cart-button d-flex">
-                      <div class="btn-left">
-                        <a href="#" class="btn btn-medium btn-black">Add to Cart</a>
-                        <svg class="cart-outline position-absolute">
-                          <use xlink:href="#cart-outline"></use>
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card-detail d-flex justify-content-between align-items-baseline pt-3">
-                    <h3 class="card-title text-uppercase">
-                      <a href="#">Iphone 13</a>
-                    </h3>
-                    <span class="item-price text-primary">$1500</span>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="product-card position-relative">
-                  <div class="image-holder">
-                    <img src="images/product-item5.jpg" alt="product-item" class="product-image">
-                  </div>
-                  <div class="cart-concern position-absolute">
-                    <div class="cart-button d-flex">
-                      <div class="btn-left">
-                        <a href="#" class="btn btn-medium btn-black">Add to Cart</a>
-                        <svg class="cart-outline position-absolute">
-                          <use xlink:href="#cart-outline"></use>
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card-detail d-flex justify-content-between align-items-baseline pt-3">
-                    <h3 class="card-title text-uppercase">
-                      <a href="#">Iphone 12</a>
-                    </h3>
-                    <span class="item-price text-primary">$1300</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="swiper-pagination position-absolute text-center"></div>
-    </section>
-    <section id="subscribe" class="container-grid padding-large position-relative overflow-hidden">
-      <div class="container">
-        <div class="row">
-          <div class="subscribe-content bg-dark d-flex flex-wrap justify-content-center align-items-center padding-medium">
+          <div class="subscribe-content bg-dark d-flex flex-wrap justify-content-center align-items-center py-5">
             <div class="col-md-6 col-sm-12">
               <div class="display-header pe-3">
                 <h2 class="display-7 text-uppercase text-light">Subscribe Us Now</h2>
-                <p>Get latest news, updates and deals directly mailed to your inbox.</p>
+                <p class="text-muted">Get latest news, updates and deals directly mailed to your inbox.</p>
               </div>
             </div>
             <div class="col-md-5 col-sm-12">
               <form class="subscription-form validate">
                 <div class="input-group flex-wrap">
-                  <input class="form-control btn-rounded-none" type="email" name="EMAIL" placeholder="Your email address here" required="">
+                  <input class="form-control form-control-lg rounded-start" type="email" name="EMAIL" placeholder="Your email address here" required="">
                   <button class="btn btn-medium btn-primary text-uppercase btn-rounded-none" type="submit" name="subscribe">Subscribe</button>
                 </div>
               </form>
@@ -811,73 +512,70 @@
         </div>
       </div>
     </section>
-    <section id="instagram" class="padding-large overflow-hidden no-padding-top">
-      <div class="container">
+    
+    <section id="instagram" class="pt-5 overflow-hidden">
+      <div class="container-fluid">
         <div class="row">
-          <div class="display-header text-uppercase text-dark text-center pb-3">
-            <h2 class="display-7">Shop Our Insta</h2>
-          </div>
-          <div class="d-flex flex-wrap">
-            <figure class="instagram-item pe-2">
-              <a href="https://templatesjungle.com/" class="image-link position-relative">
-                <img src="images/insta-item1.jpg" alt="instagram" class="insta-image">
-                <div class="icon-overlay position-absolute d-flex justify-content-center">
-                  <svg class="instagram">
-                    <use xlink:href="#instagram"></use>
-                  </svg>
-                </div>
-              </a>
-            </figure>
-            <figure class="instagram-item pe-2">
-              <a href="https://templatesjungle.com/" class="image-link position-relative">
-                <img src="images/insta-item2.jpg" alt="instagram" class="insta-image">
-                <div class="icon-overlay position-absolute d-flex justify-content-center">
-                  <svg class="instagram">
-                    <use xlink:href="#instagram"></use>
-                  </svg>
-                </div>
-              </a>
-            </figure>
-            <figure class="instagram-item pe-2">
-              <a href="https://templatesjungle.com/" class="image-link position-relative">
-                <img src="images/insta-item3.jpg" alt="instagram" class="insta-image">
-                <div class="icon-overlay position-absolute d-flex justify-content-center">
-                  <svg class="instagram">
-                    <use xlink:href="#instagram"></use>
-                  </svg>
-                </div>
-              </a>
-            </figure>
-            <figure class="instagram-item pe-2">
-              <a href="https://templatesjungle.com/" class="image-link position-relative">
-                <img src="images/insta-item4.jpg" alt="instagram" class="insta-image">
-                <div class="icon-overlay position-absolute d-flex justify-content-center">
-                  <svg class="instagram">
-                    <use xlink:href="#instagram"></use>
-                  </svg>
-                </div>
-              </a>
-            </figure>
-            <figure class="instagram-item pe-2">
-              <a href="https://templatesjungle.com/" class="image-link position-relative">
-                <img src="images/insta-item5.jpg" alt="instagram" class="insta-image">
-                <div class="icon-overlay position-absolute d-flex justify-content-center">
-                  <svg class="instagram">
-                    <use xlink:href="#instagram"></use>
-                  </svg>
-                </div>
-              </a>
-            </figure>
-          </div>
+            <h2 class="section-title text-center">Follow us on Instagram</h2>
+        </div>
+        <div class="row row-cols-5 g-0">
+          <figure class="instagram-item m-0">
+            <a href="https://templatesjungle.com/" class="image-link position-relative">
+              <img src="images/insta-item-1.jpg" alt="instagram" class="insta-image img-fluid">
+              <div class="icon-overlay position-absolute d-flex justify-content-center">
+                <svg class="instagram">
+                  <use xlink:href="#instagram"></use>
+                </svg>
+              </div>
+            </a>
+          </figure>
+          <figure class="instagram-item m-0">
+            <a href="https://templatesjungle.com/" class="image-link position-relative">
+              <img src="images/insta-item-2.jpg" alt="instagram" class="insta-image img-fluid">
+              <div class="icon-overlay position-absolute d-flex justify-content-center">
+                <svg class="instagram">
+                  <use xlink:href="#instagram"></use>
+                </svg>
+              </div>
+            </a>
+          </figure>
+          <figure class="instagram-item m-0">
+            <a href="https://templatesjungle.com/" class="image-link position-relative">
+              <img src="images/insta-item-3.jpg" alt="instagram" class="insta-image img-fluid">
+              <div class="icon-overlay position-absolute d-flex justify-content-center">
+                <svg class="instagram">
+                  <use xlink:href="#instagram"></use>
+                </svg>
+              </div>
+            </a>
+          </figure>
+          <figure class="instagram-item m-0">
+            <a href="https://templatesjungle.com/" class="image-link position-relative">
+              <img src="images/insta-item-4.jpg" alt="instagram" class="insta-image img-fluid">
+              <div class="icon-overlay position-absolute d-flex justify-content-center">
+                <svg class="instagram">
+                  <use xlink:href="#instagram"></use>
+                </svg>
+              </div>
+            </a>
+          </figure>
+          <figure class="instagram-item m-0">
+            <a href="https://templatesjungle.com/" class="image-link position-relative">
+              <img src="images/insta-item-5.jpg" alt="instagram" class="insta-image img-fluid">
+              <div class="icon-overlay position-absolute d-flex justify-content-center">
+                <svg class="instagram">
+                  <use xlink:href="#instagram"></use>
+                </svg>
+              </div>
+            </a>
+          </figure>
         </div>
       </div>
     </section>
+
     <footer class="bg-light-green position-relative">
-      <div class="pattern-overlay6">
-        <img src="images/pattern-overlay6.png" alt="pattern" class="position-absolute">
-      </div>
       <div class="container">
-        <div class="row padding-large">
+        <div class="row py-5">
           <div class="col-md-3">
             <div class="main-logo">
               <img src="images/main-logo.png" logo>
@@ -945,13 +643,12 @@
       <div class="footer-bottom py-4 border-top">
         <div class="container">
           <div class="row d-flex justify-content-end">
-            <div class="col-md-10">
+            <div class="col-md-6">
               <p>© 2023 Company, Inc. All rights reserved.</p>
             </div>
-            <div class="col-md-2">
-              <p>Design by <a href="https://templatesjungle.com/">TemplatesJungle</a>
+            <div class="col-md-6 text-end">
+              <p>FREE HTML by <a href="https://templatesjungle.com/" class="text-decoration-underline" target="_blank">TemplatesJungle</a></p>
             </div>
-            </p>
           </div>
         </div>
       </div>
@@ -959,7 +656,6 @@
 
     <script src="js/jquery-1.11.0.min.js"></script>
     <script src="plugins/bootstrap-5.1.3/js/bootstrap.bundle.min.js"></script>
-    <script type="text/javascript" src="plugins/swiper/swiper-bundle.min.js"></script>
     <script type="text/javascript" src="js/plugins.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
   </body>

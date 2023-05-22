@@ -18,10 +18,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&family=Open+Sans:wght@300;400;500;600;700&family=Over+the+Rainbow&display=swap" rel="stylesheet">
-    
-    <!-- script
-    ================================================== -->
-    <script src="js/modernizr.js"></script>
   </head>
   <body data-bs-spy="scroll" data-bs-target="#header-nav">
     <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
@@ -49,9 +45,18 @@
         <title>Shopping Cart</title>
         <path fill="currentColor" d="M16 3c-2.746 0-5 2.254-5 5v1H6.062L6 9.938l-1 18L4.937 29h22.125L27 27.937l-1-18L25.937 9H21V8c0-2.746-2.254-5-5-5zm0 2a3 3 0 0 1 3 3v1h-6V8a3 3 0 0 1 3-3zm-8.063 6H11v3h2v-3h6v3h2v-3h3.063l.875 16H7.063z" />
       </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" id="plus" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M19 11h-6V5a1 1 0 0 0-2 0v6H5a1 1 0 0 0 0 2h6v6a1 1 0 0 0 2 0v-6h6a1 1 0 0 0 0-2Z"/>
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" id="minus" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M19 11H5a1 1 0 0 0 0 2h14a1 1 0 0 0 0-2Z"/>
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" id="check" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M18.71 7.21a1 1 0 0 0-1.42 0l-7.45 7.46l-3.13-3.14A1 1 0 1 0 5.29 13l3.84 3.84a1 1 0 0 0 1.42 0l8.16-8.16a1 1 0 0 0 0-1.47Z"/>
+      </symbol>
     </svg>
 
-    <header id="header-wrap" class="align-items-center position-fixed bg-white px-3">
+    <header id="header-wrap" class="align-items-center position-fixed top-0 bg-white px-3">
 
       <nav class="navbar navbar-expand-lg">
 
@@ -64,10 +69,10 @@
             </div>
           </div>
 
-          <button class="navbar-toggler text-white" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation"><svg class="menu"><use xlink:href="#menu" /></svg></button>
+          <button class="navbar-toggler text-white" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation"><svg class="menu" width="24" height="24"><use xlink:href="#menu" /></svg></button>
           
           <!-- off canvas -->
-          <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
             
             <div class="offcanvas-header">
               <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
@@ -94,15 +99,16 @@
                   </li>
                   <li class="nav-item dropdown">
                     <a class="nav-link me-4 dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Pages</a>
-                    <ul class="dropdown-menu dropdown-menu-dark">
-                      <li><a href="about.html" class="dropdown-item" href="#scrollspyHeading3">About</a></li>
-                      <li><a href="blog.html" class="dropdown-item" href="#scrollspyHeading4">Blog</a></li>
-                      <li><a href="single-post.html" class="dropdown-item" href="#scrollspyHeading5">Single</a></li>
-                      <li><a href="single-product.html" class="dropdown-item" href="#scrollspyHeading5">Single Product</a></li>
-                      <li><a href="checkout.html" class="dropdown-item" href="#scrollspyHeading5">Checkout</a></li>
-                      <li><a href="cart.html" class="dropdown-item" href="#scrollspyHeading5">Cart</a></li>
-                      <li><a href="contact.html" class="dropdown-item" href="#scrollspyHeading5">Contact</a></li>
-                      <li><a href="styles.html" class="dropdown-item" href="#scrollspyHeading5">Styles</a></li>
+                    <ul class="dropdown-menu">
+                      <li><a href="home-alternative.html" class="dropdown-item">Home v2<span class="badge bg-primary ms-2">PRO</span></a></li>
+                      <li><a href="about.html" class="dropdown-item">About</a></li>
+                      <li><a href="blog.html" class="dropdown-item">Blog</a></li>
+                      <li><a href="single-post.html" class="dropdown-item">Single</a></li>
+                      <li><a href="single-product.html" class="dropdown-item">Single Product<span class="badge bg-primary ms-2">PRO</span></a></a></li>
+                      <li><a href="checkout.html" class="dropdown-item">Checkout<span class="badge bg-primary ms-2">PRO</span></a></a></li>
+                      <li><a href="cart.html" class="dropdown-item">Cart<span class="badge bg-primary ms-2">PRO</span></a></a></li>
+                      <li><a href="contact.html" class="dropdown-item">Contact</a></li>
+                      <li><a href="styles.html" class="dropdown-item">Styles</a></li>
                     </ul>
                   </li>
                 </ul>
@@ -118,7 +124,7 @@
                 <form action="" autocomplete="on">
                 <input id="search" name="search" type="text" placeholder="What're we looking for ?">
                 <button type="submit">
-                  <svg class="search">
+                  <svg class="search" width="24" height="24">
                     <use xlink:href="#search" />
                   </svg>
                 </button>
@@ -126,13 +132,13 @@
               </div>
               <div class="user-items d-flex gap-3">
                 <a href="#">
-                  <svg class="user"><use xlink:href="#user" /></svg>
+                  <svg class="user" width="24" height="24"><use xlink:href="#user" /></svg>
                 </a>
                 <a href="#">
-                  <svg class="like"><use xlink:href="#like" /></svg>
+                  <svg class="like" width="24" height="24"><use xlink:href="#like" /></svg>
                 </a>
                 <a href="cart.html">
-                  <svg class="shopping-bag"><use xlink:href="#shopping-bag" /></svg>
+                  <svg class="shopping-bag" width="24" height="24"><use xlink:href="#shopping-bag" /></svg>
                 </a>
               </div>
             </div>
@@ -142,11 +148,11 @@
       </nav>
     </header>
 
-<section id="intro" class="padding-hero jarallax">
+<section id="intro" class="py-5 jarallax">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-7">
-				<div class="page-title my-5">
+				<div class="page-title my-5 pt-5">
 					<div class="breadcrumb text-muted">
 						<span class="item"><a href="index.html">Home</a></span> &nbsp; / &nbsp; <span class="item">Styles</span>
 					</div>
@@ -159,7 +165,7 @@
 	<img src="images/banner.jpg" class="jarallax-img">
 </section>
 
-<section class="padding-large">
+<section class="py-5">
 	<div class="container">
 		<div class="row mb-3">
 
@@ -366,56 +372,56 @@
 
 		    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-5">
 		      <div class="col d-flex align-items-start">
-		        <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#location"></use></svg>
+		        <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#user"></use></svg>
 		        <div>
 		          <h4 class="fw-bold mb-0">Featured title</h4>
 		          <p>Paragraph of text beneath the heading to explain the heading.</p>
 		        </div>
 		      </div>
 		      <div class="col d-flex align-items-start">
-		        <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#cpu-fill"></use></svg>
+		        <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#like"></use></svg>
 		        <div>
 		          <h4 class="fw-bold mb-0">Featured title</h4>
 		          <p>Paragraph of text beneath the heading to explain the heading.</p>
 		        </div>
 		      </div>
 		      <div class="col d-flex align-items-start">
-		        <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#calendar3"></use></svg>
+		        <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#search"></use></svg>
 		        <div>
 		          <h4 class="fw-bold mb-0">Featured title</h4>
 		          <p>Paragraph of text beneath the heading to explain the heading.</p>
 		        </div>
 		      </div>
 		      <div class="col d-flex align-items-start">
-		        <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#home"></use></svg>
+		        <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#menu"></use></svg>
 		        <div>
 		          <h4 class="fw-bold mb-0">Featured title</h4>
 		          <p>Paragraph of text beneath the heading to explain the heading.</p>
 		        </div>
 		      </div>
 		      <div class="col d-flex align-items-start">
-		        <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#speedometer2"></use></svg>
+		        <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#user"></use></svg>
 		        <div>
 		          <h4 class="fw-bold mb-0">Featured title</h4>
 		          <p>Paragraph of text beneath the heading to explain the heading.</p>
 		        </div>
 		      </div>
 		      <div class="col d-flex align-items-start">
-		        <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#toggles2"></use></svg>
+		        <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#like"></use></svg>
 		        <div>
 		          <h4 class="fw-bold mb-0">Featured title</h4>
 		          <p>Paragraph of text beneath the heading to explain the heading.</p>
 		        </div>
 		      </div>
 		      <div class="col d-flex align-items-start">
-		        <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#geo-fill"></use></svg>
+		        <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#search"></use></svg>
 		        <div>
 		          <h4 class="fw-bold mb-0">Featured title</h4>
 		          <p>Paragraph of text beneath the heading to explain the heading.</p>
 		        </div>
 		      </div>
 		      <div class="col d-flex align-items-start">
-		        <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#tools"></use></svg>
+		        <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#menu"></use></svg>
 		        <div>
 		          <h4 class="fw-bold mb-0">Featured title</h4>
 		          <p>Paragraph of text beneath the heading to explain the heading.</p>
@@ -789,7 +795,7 @@
 
 <footer class="bg-light-green position-relative">
   <div class="container">
-    <div class="row padding-large">
+    <div class="row py-5">
       <div class="col-md-3">
         <div class="main-logo">
           <img src="images/main-logo.png" logo>

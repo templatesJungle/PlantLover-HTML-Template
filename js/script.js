@@ -51,38 +51,6 @@
 		});
 	}
 
-	var initIncrementButton = function() {
-
-	    $('.spin-number-output').each(function(){
-
-	      // quantity number//
-	      let spinNumberOutput = document.querySelector('.spin-number-output');
-	      let regularPrice = document.querySelector('.regular-price');
-	      let quantityOutput = document.querySelector('.quantity-output');
-	      let plusButton = document.querySelector('.incriment-button');
-	      let minusButton = document.querySelector('.decriment-button');
-
-	      spinNumberOutput.value = 1;
-	      quantityOutput.innerHTML = '$' + regularPrice.innerHTML * spinNumberOutput.value
-
-	      plusButton.addEventListener('click', function(){
-	          spinNumberOutput.value ++
-	          // console.log( quantityOutput.innerHTML = regularPrice.innerHTML * spinNumberOutput.value)
-	      })
-
-	      minusButton.addEventListener('click', function(){
-
-	        if( spinNumberOutput.value > 1){
-	         spinNumberOutput.value--
-	        // console.log( quantityOutput.innerHTML = regularPrice.innerHTML * spinNumberOutput.value)
-
-	         }
-	      })
-	      
-	    });
-
-	  }
-
 	$(window).scroll(function() {    
 	    initScrollNav();
 	}); 
@@ -92,8 +60,6 @@
     	initScrollNav();
     	initJarallax();
     	initSwiper();
-    	initIncrementButton();
-
     }); // End of a document
 
 })(jQuery);

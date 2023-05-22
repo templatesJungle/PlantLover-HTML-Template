@@ -24,7 +24,7 @@ CSS STRUCTURE:
 /** 1. VARIABLES
 --------------------------------------------------------------*/
 :root {
-  --accent-color:         #717171;
+  --accent-color:         #6DAD84;
   --white-color:          #fff;
   --gray-color:           #F3F3F3;
   --dark-gray-color:      #4C544F;
@@ -72,11 +72,11 @@ html {
 }
 body {
   font-family: var(--body-font);
-  font-size: 14px;
-  font-weight: 500;
+  /* font-size: 14px;
+  font-weight: 500; 
   line-height: 2;
   color: var(--accent-color);
-  margin: 0;
+  margin: 0;*/
 }
 a {
   color: var(--dark-color);
@@ -91,6 +91,12 @@ a:hover {
   color: var(--primary-color);
 }
 
+.content-light,
+.content-light h2,
+.content-light a,
+.content-light a:hover {
+  color: #fff;
+}
 
 /*----------------------------------------------*/
 /* 1. Section */
@@ -150,287 +156,9 @@ a:hover {
     background: var(--light-color);
 }
 
-/*------------ Border Radius -----------*/
-.border-circle {
-   border-radius: 50%;
-}
-.border-rounded-10 {
-   border-radius: 10px;
-}
-.border-none {
-   border: none;
-}
-
-/* - Content Colors
---------------------------------------------------------------*/
-.content-light h1, .content-light h2, .content-light h3, .content-light h4, .content-light h5, .content-light h6 {
-  color: var(--light-color);
-}
-.primary-color h1, .primary-color h2, .primary-color h3, .primary-color h4, .primary-color h5, .primary-color h6 {
-  color: var(--primary-color);
-}
-.content-light a,
-.content-light {
-  color: var(--light-color);
-}
-.content-light a:hover {
-  color: var(--light-color);
-}
-.content-light li.menu-item .icon{
-    color: var(--light-color);
-}
-.content-dark h1, .content-dark h2, .content-dark h3, .content-dark h4, .content-dark h5, .content-dark h6 {
-  color: var(--dark-color);
-}
-.content-dark a,
-.content-dark {
-  color: var(--dark-color);
-}
-.content-dark a:hover {
-  color: var(--dark-color);
-}
-.content-dark li.menu-item .icon{
-    color: var(--dark-color);
-}
-
 /*--------------------------------------------------------------
 This is main CSS file that contains custom style rules used in this template
 --------------------------------------------------------------*/
-
-/* - Section Padding
---------------------------------------------------------------*/
-.padding-xsmall {
-  padding-top: 0.5em;
-  padding-bottom: 0.5em;
-}
-.padding-small {
-  padding-top: 2em;
-  padding-bottom: 2em;
-}
-.padding-medium {
-  padding-top: 4em;
-  padding-bottom: 4em;
-}
-.padding-large {
-  padding-top: 7em;
-  padding-bottom: 7em;
-}
-.padding-xlarge {
-  padding-top: 9.5em;
-  padding-bottom: 9.5em;
-}
-.padding-hero {
-  padding-top: 30vh;
-  padding-bottom: 10vh;
-}
-
-/* no padding */
-.no-padding-top {
-  padding-top: 0 !important;
-}
-.no-padding-right {
-  padding-right: 0 !important;
-}
-.no-padding-bottom {
-  padding-bottom: 0 !important;
-}
-.no-padding-left {
-  padding-left: 0 !important;
-}
-.no-padding-tb {
-  padding-top: 0 !important;
-  padding-bottom: 0 !important;
-}
-.no-padding-lr {
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-}
-.no-gutter {
-  padding: 0 !important;
-}
-
-/* no padding and margin */
-.no-padding {
-  padding: 0 !important;
-}
-.no-margin {
-  margin: 0 !important;
-}
-
-/* - Section margin
---------------------------------------------------------------*/
-.margin-small {
-  margin-top: 3em;
-  margin-bottom: 3em;
-}
-.margin-medium {
-  margin-top: 5em;
-  margin-bottom: 5em;
-}
-.margin-large {
-  margin-top: 7em;
-  margin-bottom: 7em;
-}
-.margin-xlarge {
-  margin-top: 9em;
-  margin-bottom: 9em;
-}
-
-@media only screen and (max-width: 768px) {
-  .margin-small,
-  .margin-medium,
-  .margin-large {
-    margin-top: 1em;
-    margin-bottom: 1em;
-  }
-}
-
-/* - Section width
---------------------------------------------------------------*/
-.full-width-inner {
-    width: 100%;
-    border: none;
-}
-.half-width-inner {
-    width: 45%;
-    border: none;
-    margin: 0 auto 85px;
-}
-
-/*--------------------------------------------------------------
-/** 2.10 Buttons
---------------------------------------------------------------*/
-
-/* - Button Sizes
-------------------------------------------------------------- */
-.btn.btn-small {
-  padding: 0.8em 1.8em;
-  font-size: 0.65em;
-}
-.btn.btn-medium {
-  padding: 1.2em 2.8em;
-  font-size: 1.3em;
-}
-.btn.btn-large {
-  padding: 2.4em 5.1em;
-  font-size: 1.8em;
-}
-
-/* - Button Shapes
-------------------------------------------------------------- */
-.btn.btn-rounded,
-.btn.btn-rounded::after {
-  border-radius: 6px;
-}
-.btn.btn-pill,
-.btn.btn-pill::after {
-  border-radius: 2em;
-}
-/* button outline */
-.btn.btn-outline-dark,
-.btn.btn-outline-light,
-.btn.btn-outline-accent {
-  background: transparent;
-  text-shadow: none;
-  box-shadow: none;
-}
-.btn.btn-outline-dark:hover::after,
-.btn.btn-outline-light:hover::after {
-  background-color: transparent;
-}
-.btn.btn-outline-dark {
-  border-color: rgba(0,0,0,1);
-  color: var(--dark-color);
-}
-.btn.btn-outline-dark:hover {
-  background: var(--dark-color);
-  color: var(--light-color);
-}
-.btn.btn-outline-light {
-  border-color: rgba(255,255,255,0.5);
-  color: var(--light-color);
-}
-.btn.btn-outline-light:hover {
-  background: var(--primary-color);
-  color: var(--light-color);
-  border-color: var(--primary-color);
-}
-.btn.btn-outline-accent {
-  background: transparent;
-  border-color: var(--accent-color);
-  color: var(--dark-color);
-}
-.btn.btn-outline-accent:hover {
-  border-color: var(--dark-color);
-  color: var(--dark-color) !important;
-}
-.btn.btn-full {
-  display: block;
-  margin: .85em 0;
-  width: 100%;
-  letter-spacing: 0.12em;
-}
-
-/* - Buttons Color Scheme
-------------------------------------------------------------- */
-.btn.btn-normal {
-  text-decoration: underline;
-  border: none;
-}
-.btn.btn-normal:hover {
-  text-decoration: none;
-}
-.btn.btn-accent {
-  color: var(--light-color);
-  background-color: var(--accent-color);
-  border: none;
-}
-.btn.btn-accent:hover {
-  color: var(--light-color) !important;
-  background-color: var(--primary-color);
-}
-.btn.btn-black {
-  background-color: var(--dark-color);
-  color: var(--light-color);
-  border: none;
-}
-.btn.btn-black:hover {
-  background-color: var(--primary-color);
-  color: var(--light-color);
-}
-.btn.btn-light {
-  background-color: var(--light-color);
-  color: var(--dark-color);
-  border: none;
-}
-.btn.btn-light:hover {
-  background-color: var(--primary-color);
-  color: var(--light-color);
-}
-.btn.btn-primary {
-  background: var(--primary-color);
-  color: var(--light-color);
-  border: none;
-}
-.btn.btn-primary:hover {
-  background-color: var(--dark-color);
-  color: var(--light-color);
-}
-
-/* - Buttons Aligns
-------------------------------------------------------------- */
-.btn-left {
-  text-align: left;
-  display: block;
-}
-.btn-center {
-  text-align: center;
-  display: block;
-}
-.btn-right {
-  text-align: right;
-  display: block;
-}
 
 /*----------------------------------------------*/
 /* 2 SITE STRUCTURE */
@@ -516,25 +244,10 @@ This is main CSS file that contains custom style rules used in this template
   z-index: 10;
   transition: background 0.3s ease-out;
 }
-#header-wrap .nav-item .nav-link {
-    color: var(--navbar-color-color);
-    /*border-bottom: 1px solid rgb(19, 24, 20, 0);
-    padding: 0;
-    transition: 0.8s ease-out;*/
-}
-/*#header-wrap .nav-item .nav-link.active,
-#header-wrap .nav-item .nav-link:hover {
-    border-bottom: 1px solid rgb(19, 24, 20, 1);
-}*/
 
 /*------------ Icons -----------*/
 button svg {
   color: var(--dark-color);
-}
-button svg,
-.right-block svg {
-    width: 18px;
-    height: 18px;
 }
 .right-block .search-box {
     border-right: 1px solid var(--accent-color);
@@ -556,7 +269,6 @@ button svg,
 }
 #billboard .icon-box p {
    line-height: 1.5;
-   color: var(--accent-color);
 }
 #billboard .icon-box .icon-number {
     width: 60px;
@@ -711,7 +423,6 @@ footer li.nav-item {
   color: var(--secondary-color);
 }
 .btn {
-  padding: 1rem 1.5rem;
   font-weight: bold;
 }
 .btn-link,
@@ -794,7 +505,7 @@ a:hover {
 
 /* nav-link active */
 .nav-link {
-  color: #9099a7;
+  color: #333;
   position: relative;
 }
 .nav-link:not(.dropdown-toggle):after {
@@ -832,12 +543,6 @@ section header .text-muted {
   line-height: 180%;
   letter-spacing: 0.4em;
   text-transform: uppercase;
-}
-.dropdown-menu-dark {
-  background-color: var(--dark-color);
-}
-.offcanvas.show {
-  background-color: var(--dark-color);
 }
 
 /* image circle */
